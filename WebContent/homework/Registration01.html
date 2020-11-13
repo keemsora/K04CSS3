@@ -21,12 +21,10 @@
             background-color: white;
             border:1px solid gray;
             border-top: 2px solid #152747;
-            width:200px;  
         }
 
         tr th{
             text-align: left;
-            border: 1px solid red;
             width:0%;
         }
         tr th:first-child{
@@ -35,9 +33,7 @@
             padding-left:50px;
             padding-right:0;
         }
-        tr td:last-child{
-            padding: 0px;
-        }
+
         #double, #fo{
             background-color: #343434;
             color: white;
@@ -47,9 +43,8 @@
         #reg tr td{
             text-align: left;
             color: #a8a9a9;
-            padding: 10px 40px 10px;
-            border: 1px solid red;
-            width: 500px;
+            padding: 5px 40px 10px;
+            width: 200px;
             
         }
         td input{
@@ -71,7 +66,12 @@
         }
         #bday{
             color: gray;
-            padding: 10px 10px 10px;        
+            padding: 10px 10px 10px;  
+            background-image: url(/images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 42px;
+            background-position: right;
+              
         }
         #id{
             padding: 8px;
@@ -82,7 +82,60 @@
         td select{
             padding: 10px 20px 10px;
         }
-        
+        .tel1, .tel2, .ph1, .ph2{
+            width:50px;
+        }
+        #check{
+            padding:30px 85px 10px;
+            background-color: white;
+            border:1px solid gray;
+            border-top: 2px solid #152747;
+            width:876px;  
+            text-align: left;
+        }
+        #agree tr>td{
+            padding: 5px 2px 5px; 
+            font-size:12pt;
+            color:#828283;
+        }
+        #agree tr>td.small{
+            font-size:8pt;
+            color:#7D807D
+        }
+        #check tr>th{
+            padding-left:0;
+            padding-bottom: 10px;
+            text-align: left;
+            color:black;
+            font-size: 11pt;
+        }
+        #check tr>td{
+            padding: 5px 20px 5px;
+        }
+        #check tr>td span.sp1{
+            color: gray;
+            padding-right:10px;
+        }
+        #check tr>td span.sp2{
+            color: #6E8CB9;
+            font-size: 5px;
+        }
+        tr#check1 td{
+            padding: 8px 40px 50px;
+        }
+        #regi button{
+            padding: 13px 70px 13px;
+            margin:  20px 320px 20px;
+            background-color: #274069;
+            color: white;
+            border-radius: 5px;
+        }
+        .due{
+            background-image: url(/images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: 42px;
+            background-position: right;
+        }
  
     </style>
 </head>
@@ -97,7 +150,7 @@
             <tr>
                 <th>*</th>
                 <th>아이디</th>
-                <td><input type="text" name="id" size="30">
+                <td colspan="2"><input type="text" name="id">
                     <input type="button" value="중복확인" id="double"></td>
                 <td></td>
                 
@@ -111,21 +164,20 @@
             <tr>
                 <th>*</th>
                 <th>비밀번호</th>
-                <td><input type="text" name="pw" size="50"></td>
+                <td><input type="text" name="pw"></td>
                 <td></td>
             </tr>
             <tr>
                 <th></th>
                 <td></td>
-                <td>※ 영문/숫자/특수문자 조합 6~20자 이상 입력해주세요.
+                <td colspan="3">※ 영문/숫자/특수문자 조합 6~20자 이상 입력해주세요.
                     (아이디/전화번호사용 불가)</td>
-                <td></td>
             </tr>
             <tr> 
                 <th></th>
                 <td></td>   
-                <td >※ 1234** 비밀번호는 홈페이지 사용에 제한됩니다.</td>
-                <td></td>
+                <td colspan="3">※ 1234** 비밀번호는 홈페이지 사용에 제한됩니다.
+                </td>
             </tr>
             <tr>
                 <th>*</th>
@@ -136,7 +188,7 @@
             <tr class="multi1">
                 <th>*</th>
                 <th>이름</th>
-                <td><input type="text" name="name">
+                <td colspan="2"><input type="text" name="name">
                 <input type="button" value="여" id="female">
                 <input type="button" value="남" id="male">
                 </td>
@@ -146,7 +198,7 @@
                 <th>*</th>
                 <th>생년월일</th>
                 <td><input type="text" name="bd" value="1992-11-04" 
-                    disabled-"disabled" id="bday">
+                    disabled-"disabled" id="bday"">
                 </td>
                 <td></td>
      
@@ -154,7 +206,9 @@
             <tr>
                 <th>*</th>
                 <th>주소</th>
-                <td><input type="text" name="adr" id="ad"><input type="button" value="우편번호찾기" id="fo"></td>
+                <td colspan="2">
+                    <input type="text" name="adr" id="ad">&nbsp;
+                    <input type="button" value="우편번호찾기" id="fo"></td>
                 <td></td>
             </tr>
             <tr>
@@ -163,13 +217,14 @@
             <tr>
                 <th>*</th>
                 <th>이메일</th>
-                <td><input type="text" name="email1" size="10">&nbsp;@&nbsp;<input type="text" name="email2" size="10"></td>
-                <td></td>
+                <td colspan="3">
+                    <input type="text" name="email1" size="10">&nbsp;@&nbsp;
+                    <input type="text" name="email2" size="10"></td>
             </tr>
             <tr>
                 <th>*</th>
                 <th>휴대폰번호</th>
-                <td>
+                <td colspan="2">
                     <select name="phonenum">
                         <option value="011">011</option>
                         <option value="016">016</option>
@@ -177,14 +232,15 @@
                         <option value="018">018</option>
                         <option value="010">010</option>
                     </select>&nbsp;-&nbsp;
-                    <input type="ph" name="ph1" size="5">&nbsp;-&nbsp;<input type="ph" name="ph2" size="5">
+                    <input type="ph" name="ph1" class="ph1" maxlength="4">&nbsp;-&nbsp;
+                    <input type="ph" name="ph2" class="ph2" maxlength="4">
                 </td>
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <th>전화번호</th>
-                <td>
+                <td colspan="2">
                     <select name="telnum">
                         <option value="070">070</option>
                         <option value="031">031</option>
@@ -199,13 +255,13 @@
             <tr>
                 <td></td>
                 <th>출판계약일</th>
-                <td><input type="text" name="contract"></td>
+                <td><input type="text" name="contract" class="due"></td>
                 <td></td>
             </tr>
             <tr>
                 <td></td>
                 <th>출판종료일</th>
-                <td><input type="text" name="due"></td>
+                <td><input type="text" name="due" class="due"></td>
                 <td></td>
             </tr>
             <tr>
@@ -222,7 +278,56 @@
                 </td>
             </tr>
         </table>
+        <table id="agree">
+            <tr>
+               <td>
+                   이용약관 동의*&nbsp;&nbsp;
+                </td>
+                <td colspan="3" class="small">
+                    선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를
+                    이용할 수 있습니다.
+                </td>
+        </table>
+        <table id="check">    
+            <tr>
+                <th colspan="4" class="check1">
+                    <input type="checkbox" name="전체동의" id="">&nbsp;전체&nbsp;동의<br/>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="checkbox" name="약관1" class="box1">이용약관
+                    <span class="sp1">(필수)</span>
+                    <span class="sp2">약관보기></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="checkbox" name="약관1" class="box2">개인정보처리방침 
+                    <span class="sp1">(필수)</span>
+                    <span class="sp2">약관보기></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="checkbox" name="약관1" class="box3">이벤트 및 혜택 알림 수신 
+                </td>
+            </tr>
+            <tr id=check1>
+                <td colspan="4">
+                    <input type="checkbox" name="약관1" class="box4">SMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="약관1" class="box5">이메일  
+                </td>
+            </tr>
+ 
+        </table>
+        <table id="regi">
+            <tr>
+                <td clospan="4"><button type="button" value="가입하기">가입&nbsp;하기</button></td>
+            </tr>
+        </table>
         </td>
+
     </tr>
 
     </table>
