@@ -6,41 +6,41 @@
     <title>calculator.html</title>
     <style>
     .bg { 
-        width: 350px;
-        height: 300px;
+        width: 300px;
+        height: 250px;
         background-color: #DDDDDD;
-        border-spacing: 4px;
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 10px;
     }
-    button{
-        background-color: #373737;
-        color: white;
-        padding: 10px;
-        margin: 0;
-        width: 50%;
-        border-radius: 10px 10px 10px 10px;
-    }
-    th:last-child{
-        background-color: #FA960A;
-        color: white;
-        border-radius: 10px 10px 10px 10px;
-    }
-
     tr.sc th{
+        padding: 30px;
+        border-radius: 10px;
         background-color: #70C738;
         color: #373737;
-        border-radius: 10px 10px 10px 10px;
         text-align: right;
         font-size: 24pt;
-        padding: 10px;
     }
-    tr.tab th{
+    tr.tab button{
         background-color: #7B7B7B;
         color: white;
-        border-radius: 10px 10px 10px 10px;
+        border: solid #7B7B7B;
+        border-radius: 10px;
         text-align: center;
         padding: 10px;
-        width:50%
+        width:100%
+    }
+    button.number{
+        background-color: #373737;
+        color: white;
+        padding: 20px 40px 20px;
+        border-radius: 10px;
+        border: 1px solid #373737;
+    }
+    button.cal{
+        padding: 20px 40px 20px;
+        border-radius: 10px;
+        background-color: #FA960A;
+        color: white;
+        border: 1px solid #FA960A;
     }
 
     </style>
@@ -48,37 +48,36 @@
 <body>
     <table class="bg">
     <tr class="sc">
-        <th colspan="4">123+654</th>
+        <th colspan="4"></th>
     </tr>  
     <tr class="tab">
-        <th colspan="2">BackSpace</th>
-        <th colspan="2">C</th>
+        <th colspan="2"><button type="button">BackSpace</button></th>
+        <th colspan="2"><button type="button">C</button></th>
     </tr>
     <tr>
-        <th><button type = "button" value="1">1</th>
-        <th><button type = "button" value="2">2</th>
-        <th><button type = "button" value="3">3</th>
-        <th><button type = "button" value="/">/</th>
+        <th><button type = "button" class="number">1</th>
+        <th><button type = "button" class="number">2</th>
+        <th><button type = "button" class="number">3</th>
+        <th><button type = "button" class="cal">/</th>
     </tr>
     <tr>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>X</th>
+        <th><button type = "button" class="number">4</button></th>
+        <th><button type = "button" class="number">5</button></th>
+        <th><button type = "button" class="number">6</button></th>
+        <th><button type = "button" class="cal">-</button></th>
     </tr>
     <tr>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>+</th>
+        <th><button type = "button" class="number">7</button></th>
+        <th><button type = "button" class="number">8</button></th>
+        <th><button type = "button" class="number">9</button></th>
+        <th><button type = "button" class="cal">×</button></th>
     </tr>
     <tr>
-        <th>=</th>
-        <th>0</th>
-        <th>.</th>
-        <th>-</th>
+        <th><button type = "button" class="number">=</button></th>
+        <th><button type = "button" class="number">0</button></th>
+        <th><button type = "button" class="number">.</button></th>
+        <th><button type = "button" class="cal">÷</button></th>
     </tr>
-
     </table>
 </body>
 </html>
