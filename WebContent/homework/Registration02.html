@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration01.html</title>
+    <title>Registration02.html</title>
     <style>
        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
         *{font-family: 'Noto Sans KR', sans-serif;
@@ -14,6 +14,7 @@
             padding:20px 20px 20px 20px;
             text-align: right;
             font-size:10pt;
+            width: 400px;
 
         }
         table#reg {
@@ -21,6 +22,7 @@
             background-color: white;
             border:1px solid gray;
             border-top: 2px solid #152747;
+            
         }
 
         tr th{
@@ -212,14 +214,25 @@
                 <td></td>
             </tr>
             <tr>
-     
+                <td></td>
+                <td></td>
+                <td colspan="3">
+                    <input type="text" name="adr" size="20">&nbsp;
+                    <input type="text" size="3"></td>
             </tr>
             <tr>
                 <th>*</th>
                 <th>이메일</th>
                 <td colspan="3">
-                    <input type="text" name="email1" size="10">&nbsp;@&nbsp;
-                    <input type="text" name="email2" size="10"></td>
+                    <input type="text" name="email1" size="5">&nbsp;@&nbsp;
+                    <input type="text" name="email2" size="5">
+                    <select name="emailaddr">
+                        <option value="byself">직접입력</option>
+                        <option value="gamil">gmail.com</option>
+                        <option value="naver">naver.com</option>
+                        <option value="daum">daum.net</option>
+                        <option value="nate">nate.com</option>
+                    </select></td>
             </tr>
             <tr>
                 <th>*</th>
